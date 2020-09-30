@@ -16,10 +16,10 @@ function processText () {
   let sortedNames = uniqueNames.sort()
   
   $('#lProcessed').html(`Texto a ser salvo no Google Drive: [<b>${step3.length} Comentário(s)</b>]`)
-  $('#tProcessed').val(step3.join('\n\n'))
+  $('#tProcessed').val(step3.join('\n\n').trim())
   
   $('#lViewers').html(`Listagem de espectadores em ordem alfabética: [<b>${sortedNames.length} Pessoa(s)</b>]`)
-  $('#tViewers').val(sortedNames.join('\n'))
+  $('#tViewers').val(sortedNames.join('\n').trim())
   
   $('#dResults').addClass('d-block').removeClass('d-none')
 }
