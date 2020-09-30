@@ -6,7 +6,7 @@ $(() => {
 
 function processText () {
   let originalText = $('#tOriginal').val()
-  let step1 = originalText.replace(/\n\n/gm, 'XXXXXXXX')
+  let step1 = originalText.trim().replace(/\n\n/gm, 'XXXXXXXX')
   let step2 = step1.replace(/\n/gm, ' — ')
   let step3 = step2.split('XXXXXXXX')
   
@@ -15,10 +15,10 @@ function processText () {
   let uniqueNames = allNames.filter((value, index, self) => self.indexOf(value) === index)
   let sortedNames = uniqueNames.sort()
   
-  $('#lProcessed').html(`Texto a ser salvo no Google Drive: [<b>${step3.length} Comentário(s)</b>]`)
+  $('#lProcessed').html(`Texto a ser salvo no Google Drive: <span class="badge badge-success">${step3.length} Comentários</span>`)
   $('#tProcessed').val(step3.join('\n\n').trim())
   
-  $('#lViewers').html(`Listagem de espectadores em ordem alfabética: [<b>${sortedNames.length} Pessoa(s)</b>]`)
+  $('#lViewers').html(`Listagem de espectadores em ordem alfabética: <span class="badge badge-success">${sortedNames.length} Pessoas</span>`)
   $('#tViewers').val(sortedNames.join('\n').trim())
   
   $('#dResults').addClass('d-block').removeClass('d-none')
