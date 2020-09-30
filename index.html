@@ -45,20 +45,39 @@
           YouTube Chat Converter
         </h1>
       </div>
-      <label for="tOriginal">Cole o conteúdo do chat ao vivo do YouTube:</label>
+      <label id="lOriginal" for="tOriginal"
+        >Cole o conteúdo do chat ao vivo do YouTube:</label
+      >
       <textarea id="tOriginal" class="form-control mb-4" rows="10"></textarea>
       <button id="bProcess" class="btn btn-block btn-primary">
         Processar Chat do YouTube
       </button>
-      <div id="dResults" class="mt-4 d-none">
-        <label for="tProcessed">Texto a ser salvo no Google Drive:</label>
-        <textarea
-          id="tProcessed"
-          class="form-control mb-4"
-          rows="10"
-        ></textarea>
-        <label for="tViewers">Listagem de espectadores em ordem alfabética:</label>
-        <textarea id="tViewers" class="form-control mb-4" rows="10"></textarea>
+      <div id="dResults" class="mt-4">
+        <label id="lProcessed" for="tProcessed">Texto a ser salvo no Google Drive:</label>
+        <div class="row">
+          <div class="col-11">
+            <textarea
+              id="tProcessed"
+              class="form-control mb-4"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="col-1">
+            <button class="btn btn-block btn-lg">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+        </div>
+        <label id="lViewers" for="tViewers">Listagem de espectadores em ordem alfabética:</label>
+        <div class="row">
+          <div class="col-11">
+            <textarea id="tViewers" class="form-control mb-4" rows="10"></textarea>
+          </div>
+          <div class="col-1">
+            <button class="btn btn-block btn-lg">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
       </div>
     </div>
   </body>
