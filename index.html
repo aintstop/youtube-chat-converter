@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Hello!</title>
+    <title>YouTube Chat Converter</title>
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
@@ -56,14 +56,14 @@
       <div id="dResults" class="d-none">
         <label id="lProcessed" for="tProcessed" class="mt-4">Texto a ser salvo no Google Drive:</label>
         <div class="row">
-          <div class="col-11">
+          <div class="col-12 col-md-10">
             <textarea
               id="tProcessed"
-              class="form-control"
+              class="form-control mb-2"
               rows="10"
             ></textarea>
           </div>
-          <div class="col-1">
+          <div class="col-12 col-md-2">
             <button id="bCopyProcessed" class="btn btn-block btn-lg btn-secondary w-100 h-100 text-center">
               <i class="fas fa-copy"></i>
             </button>
@@ -71,10 +71,10 @@
         </div>
         <label id="lViewers" for="tViewers" class="mt-4">Listagem de espectadores em ordem alfabética:</label>
         <div class="row">
-          <div class="col-11">
-            <textarea id="tViewers" class="form-control" rows="10"></textarea>
+          <div class="col-12 col-md-10">
+            <textarea id="tViewers" class="form-control mb-2" rows="10"></textarea>
           </div>
-          <div class="col-1">
+          <div class="col-12 col-md-2">
             <button id="bCopyViewers" class="btn btn-block btn-lg btn-secondary w-100 h-100  text-center">
               <i class="fas fa-copy"></i>
             </button>
@@ -82,5 +82,10 @@
         </div>
       </div>
     </div>
+    <footer class="footer fixed-bottom">
+      <div class="container text-right">
+        Made by pdroms00
+      </div>
+    </footer>
   </body>
 </html>

@@ -15,7 +15,7 @@ function processText () {
   let uniqueNames = allNames.filter((value, index, self) => self.indexOf(value) === index)
   let sortedNames = uniqueNames.sort()
   
-  $('#lProcessed').html(`Texto a ser salvo no Google Drive: <span class="badge badge-success">${step3.length} Comentários</span>`)
+  $('#lProcessed').html(`Texto a ser salvo no Google Drive: <span class="badge badge-success">${step3.length - 1} Comentários</span>`)
   $('#tProcessed').val(step3.join('\n\n').trim())
   
   $('#lViewers').html(`Listagem de espectadores em ordem alfabética: <span class="badge badge-success">${sortedNames.length} Pessoas</span>`)
