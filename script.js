@@ -1,5 +1,7 @@
 $(() => {
   $('#bProcess').click(processText)
+  $('#bCopyProcessed').click('#tProcessed', copyText)
+  $('#bCopyViewers').click('#tViewers', copyText)
 })
 
 function processText () {
@@ -20,4 +22,9 @@ function processText () {
   $('#tViewers').val(sortedNames.join('\n'))
   
   $('#dResults').addClass('d-block').removeClass('d-none')
+}
+
+function copyText (target) {
+  $(target.data)[0].select()
+  document.execCommand('copy')
 }
